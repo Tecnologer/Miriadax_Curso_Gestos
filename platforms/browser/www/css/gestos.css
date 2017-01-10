@@ -1,0 +1,125 @@
+body {
+    background-color: #8de1bd;
+}
+
+body.claro {
+    -webkit-animation: ponlo-claro 1.5s forwards;
+}
+
+body.oscuro {
+    -webkit-animation: ponlo-oscuro 1.5s forwards;
+    /*background-color: #577a76;*/
+}
+
+button {
+    background-color: #7fba76;
+    color: #FFF;
+    border: none;
+    width: 100%;
+    padding: 30px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+#zona-gestos {
+    width: 100%;
+    background-color: #7fba76;
+    margin-top: 10px;
+    min-height: 300px;
+    display: block;
+}
+
+#info {
+    color: #fff;
+    font-size: 2em;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+#zona-gestos.doubletap {
+    -webkit-animation: pulsacion 1.5s 1;
+}
+
+#zona-gestos.press {
+    -webkit-animation: presion 1.5s 1;
+}
+
+#zona-gestos.derecha {
+    -webkit-animation: derecha 1.5s 1;
+}
+
+#zona-gestos.izquierda {
+    -webkit-animation: izquierda 1.5s 1;
+}
+
+#zona-gestos.rotate {
+    -webkit-animation: rotate 1.5s 1;
+}
+#zona-gestos.tap {
+    -webkit-animation: tap 100ms 1;
+}
+@-webkit-keyframes pulsacion {
+    0%,
+    100% {
+        background-color: #FF0000;
+    }
+    ,
+    50% {
+        background-color: #8de1bd;
+    }
+}
+
+@-webkit-keyframes presion {
+    0%,
+    100% {
+        background-color: #00FF00;
+    }
+    ,
+    50% {
+        background-color: #577a76;
+    }
+}
+
+@-webkit-keyframes derecha {
+    0%,
+    100% {
+        margin-left: 0%;
+    }
+    50% {
+        margin-left: 100%;
+    }
+}
+
+@-webkit-keyframes izquierda {
+    0%,
+    100% {
+        width: 100%;
+    }
+    50% {
+        width: 0%;
+    }
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes ponlo-oscuro {
+    100%{
+    	background-color: #577a76;
+    }
+}
+
+@-webkit-keyframes ponlo-claro {
+    100%{
+    	background-color: #8de1bd;
+    }
+}
+
+@-webkit-keyframes tap{
+	100%{
+		background-color: yellow;
+	}
+}
